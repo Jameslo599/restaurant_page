@@ -31,7 +31,8 @@ let makeBio = function() {
 
 let makeImage = function() {
     let image = document.createElement("img");
-    image.src = '/images/ZenBar.png'; 
+    image.src = '/images/Banner.jpg';
+    image.className = 'bannerImage';
     contents.appendChild(image);
 };
 
