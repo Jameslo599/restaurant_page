@@ -26,6 +26,7 @@ let makeBio = function() {
     and standards of our sushi are of the highest order. 
     In his free time, Kitamura-san enjoys playing with his cats, 
     cooking and spending time with his grandchildren.`;
+    biography.id = 'biography';
     contents.appendChild(biography);
 };
 
@@ -33,7 +34,18 @@ let makeImage = function() {
     let image = document.createElement("img");
     image.src = '/images/Banner.jpg';
     image.className = 'bannerImage';
+    image.id = 'banner'
     contents.appendChild(image);
 };
 
-export {makeHeader, makeBio, makeImage};
+let populateWelcome = function() {
+    makeHeader();
+    makeBio();
+};
+
+let removeWelcome = function() {
+    contents.removeChild(document.getElementById('header'));
+    contents.removeChild(document.getElementById('biography'));
+};
+
+export {makeBio, makeImage, populateWelcome, removeWelcome};

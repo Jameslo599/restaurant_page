@@ -9,6 +9,7 @@ let makeNavBar = function() {
     let aHome = document.createElement('a');
     aHome.innerHTML = 'Home';
     aHome.href = '#';
+    homeButton.id = 'home'
     homeButton.appendChild(aHome);
     navbar.appendChild(homeButton);
 
@@ -16,6 +17,7 @@ let makeNavBar = function() {
     let aMenu = document.createElement('a');
     aMenu.innerHTML = 'Menu';
     aMenu.href = '#';
+    menuButton.id = 'menu'
     menuButton.appendChild(aMenu);
     navbar.appendChild(menuButton);
 
@@ -23,6 +25,7 @@ let makeNavBar = function() {
     let aContact = document.createElement('a');
     aContact.innerHTML = 'Contact';
     aContact.href = '#';
+    contactButton.id = 'contact'
     contactButton.appendChild(aContact);
     navbar.appendChild(contactButton);
 };
