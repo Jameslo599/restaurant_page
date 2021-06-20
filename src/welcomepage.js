@@ -43,9 +43,4 @@ let populateWelcome = function() {
     makeBio();
 };
 
-let removeWelcome = function() {
-    contents.removeChild(document.getElementById('header'));
-    contents.removeChild(document.getElementById('biography'));
-};
-
-export {makeBio, makeImage, populateWelcome, removeWelcome};
+export {contents, makeImage, populateWelcome};
