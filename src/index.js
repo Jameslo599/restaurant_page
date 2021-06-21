@@ -20,7 +20,9 @@ let removeWelcome = function() {
 
 let removeMenu = function() {
     if (menuTab === 1) {
-    contents.removeChild(document.getElementById('menuImage'));
+        for (let i = 1; i <= 8; i++) {
+            contents.removeChild(document.getElementById('menuImage'));
+        };
     } else {};
 };
 
