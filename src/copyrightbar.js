@@ -1,0 +1,40 @@
+let container = document.getElementById('copyrightHolder');
+
+let makeCopyright = function() {
+    let copyright = document.createElement('div');
+    copyright.id = 'copyright';
+    copyright.className = 'clearfix';
+    container.appendChild(copyright);
+
+    let copyrightText = document.createElement('div');
+    copyrightText.innerHTML = 'COPYRIGHT JAMES LO 2021'
+    copyrightText.id = 'copyrightText';
+    copyrightText.classNames = 'text float left'
+    copyright.appendChild(copyrightText);
+
+    let copyrightLinks = document.createElement('ul');
+    copyrightLinks.className = 'links float right';
+    copyrightLinks.id = 'links';
+    copyright.appendChild(copyrightLinks);
+
+    let facebookIcon = document.createElement('li');
+    let facebookLink = document.createElement('a');
+    let facebookFont = document.createElement('i');
+    facebookLink.href = '#';
+    facebookFont.className = 'fab fa-facebook-square'
+
+    let orderIcon = document.createElement('li');
+    let orderLink = document.createElement('a');
+    let orderFont = document.createElement('i');
+    orderLink.href = '#';
+    orderFont.className = 'fas fa-utensils';
+
+    facebookLink.appendChild(facebookFont);
+    facebookIcon.appendChild(facebookLink);
+    copyrightLinks.appendChild(facebookIcon);
+    orderLink.appendChild(orderFont);
+    orderIcon.appendChild(orderLink);
+    copyrightLinks.appendChild(orderIcon);
+};
+
+export default makeCopyright;

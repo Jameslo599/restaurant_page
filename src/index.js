@@ -1,11 +1,13 @@
 import {makeNavBar, makeLogo} from './navbar.js';
 import {contents, makeImage, populateWelcome} from './welcomepage.js';
 import makeMenu from './menu.js';
+import makeCopyright from './copyrightbar.js'
 
 makeNavBar();
 makeLogo();
 makeImage();
 populateWelcome();
+makeCopyright();
 
 let homeTab = 1;
 let menuTab = 0;
