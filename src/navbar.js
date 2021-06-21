@@ -36,7 +36,7 @@ let makeLogo = function() {
     aLogo.href = '#';
     aLogo.appendChild(logo);
     logo.className = 'logo';
-    logo.src = '/dist/images/Daruma.png';
+    logo.src = 'images/Daruma.png';
     document.getElementById('logoHolder').appendChild(aLogo);
 };
 
