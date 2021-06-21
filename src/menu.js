@@ -4,7 +4,7 @@ let makeMenu = function() {
     let image;
     for (let i = 1; i <= 8; i++) {
         image = document.createElement('img');
-        image.src = `/images/menu${i}.jpg`;
+        image.src = `images/menu${i}.jpg`;
         image.className = 'menuImage';
         image.id = 'menuImage';
         contents.appendChild(image);

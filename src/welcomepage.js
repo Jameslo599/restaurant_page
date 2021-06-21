@@ -32,7 +32,7 @@ let makeBio = function() {
 
 let makeImage = function() {
     let image = document.createElement("img");
-    image.src = '/images/Banner.jpg';
+    image.src = 'images/Banner.jpg';
     image.className = 'bannerImage';
     image.id = 'banner'
     contents.appendChild(image);
