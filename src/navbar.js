@@ -5,6 +5,12 @@ let makeNavBar = function() {
     navbar.className = 'nav';
     contents.appendChild(navbar);
 
+    let navbarText = document.createElement('div');
+    navbarText.innerHTML = 'Zen Sushi & Grill'
+    navbarText.id = 'title';
+    navbarText.classNames = 'text float left clearfix'
+    navbar.appendChild(navbarText);
+
     let homeButton = document.createElement('li');
     let aHome = document.createElement('a');
     aHome.innerHTML = 'Home';

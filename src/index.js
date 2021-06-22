@@ -15,16 +15,13 @@ let contactTab = 0;
 
 let removeWelcome = function() {
     if (homeTab === 1) {
-    contents.removeChild(document.getElementById('header'));
     contents.removeChild(document.getElementById('biography'));
     } else {};
 };
 
 let removeMenu = function() {
     if (menuTab === 1) {
-        for (let i = 1; i <= 8; i++) {
-            contents.removeChild(document.getElementById('menuImage'));
-        };
+    contents.removeChild(document.getElementById('gallery'));
     } else {};
 };
 

@@ -1,13 +1,18 @@
 let contents = document.getElementById('content');
 
 let makeMenu = function() {
+
+    let menuGallery = document.createElement('div');
+    menuGallery.id = 'gallery';
+    contents.appendChild(menuGallery);
+
     let image;
     for (let i = 1; i <= 8; i++) {
         image = document.createElement('img');
         image.src = `images/menu${i}.jpg`;
         image.className = 'menuImage';
         image.id = 'menuImage';
-        contents.appendChild(image);
+        menuGallery.appendChild(image);
         };
     
     let modalContainer = document.createElement('div');

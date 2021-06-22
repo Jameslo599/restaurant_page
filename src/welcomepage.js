@@ -1,18 +1,10 @@
 let contents = document.getElementById("content");
 
-let makeHeader = function() {
-    let header = document.createElement("h1");
-    header.innerHTML = 'Zen Sushi & Grill';
-    header.id = 'header';
-    contents.appendChild(header);
-};
-
 let makeBio = function() {
     let biography = document.createElement("h2");
-    biography.innerHTML = `We specialize in delicious Japanese cuisine, 
-    from fresh sushi with a variety of special fish such as Toro, 
+    biography.innerHTML = `We specialize in delicious Japanese cuisine 
+    from fresh sushi with a variety of special fish, 
     to hibachi entrees grilled to perfection in the kitchen. <br/><br/>
-    Our talented team consists of: <br/><br/> 
     Chef-owner Jack with over 25 years of experience and who previously owned 
     "Kiraku Japanese Restaurant" in Houston, Texas. 
     He works hard every day to provide a customized experience for every customer 
@@ -39,7 +31,6 @@ let makeImage = function() {
 };
 
 let populateWelcome = function() {
-    makeHeader();
     makeBio();
 };
 
