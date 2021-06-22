@@ -33,12 +33,23 @@ let makeCopyright = function() {
     orderLink.rel = 'noreferrer noopener';
     orderFont.className = 'fas fa-utensils';
 
+    let gitIcon = document.createElement('li');
+    let gitLink = document.createElement('a');
+    let gitFont = document.createElement('i');
+    gitLink.href = 'https://www.https://github.com/Jameslo599.com/';
+    gitLink.target = '_blank';
+    gitLink.rel = 'noreferrer noopener';
+    gitFont.className = 'fab fa-github-square';
+
     facebookLink.appendChild(facebookFont);
     facebookIcon.appendChild(facebookLink);
     copyrightLinks.appendChild(facebookIcon);
     orderLink.appendChild(orderFont);
     orderIcon.appendChild(orderLink);
     copyrightLinks.appendChild(orderIcon);
+    gitLink.appendChild(gitFont);
+    gitIcon.appendChild(gitLink);
+    copyrightLinks.appendChild(gitIcon);
 };
 
 export default makeCopyright;
