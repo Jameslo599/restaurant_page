@@ -39,7 +39,7 @@ let makeNavBar = function() {
 let makeLogo = function() {
     let logo = document.createElement('img');
     let aLogo = document.createElement('a');
-    aLogo.href = '#';
+    aLogo.href = '';
     aLogo.appendChild(logo);
     logo.className = 'logo';
     logo.src = 'images/Daruma.png';
