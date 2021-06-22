@@ -43,7 +43,7 @@ body {
 
 .bannerImage {
     width: 100%;
-    height: 500px;
+    height: 300px;
     display: block;
 }
 
@@ -138,4 +138,42 @@ body {
     color: #FFFFFF;
     font-size: 30px;
     margin-left: 15px;
+}
+
+#contactHolder {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3em;
+    justify-items: center;
+}
+
+#contactInfo {
+    display: inline-block;
+    text-align: center;
+    background-color: #FF6F61;
+    border-radius: 2em;
+    border-color: #1111118a;
+    border: solid;
+    border-width: thick;
+    padding-bottom: 3px;
+    width: 500px;
+}
+
+#openingTime {
+    display: inline-block;
+    text-align: center;
+    background-color: #FF6F61;
+    border-radius: 2em;
+    border-color: #1111118a;
+    border: solid;
+    border-width: thick;
+    padding-bottom: 3px;
+    width: 500px;
+}
+
+#map {
+    display: block;
+    height: 500px;
+    width: 100%;
+    margin: auto;
 }
