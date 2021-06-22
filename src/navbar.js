@@ -1,4 +1,4 @@
-let contents = document.getElementById("content");
+import { contents } from "./welcomepage";
 
 let makeNavBar = function() {
     let navbar = document.createElement('ul');
@@ -29,7 +29,7 @@ let makeNavBar = function() {
 
     let contactButton = document.createElement('li');
     let aContact = document.createElement('a');
-    aContact.innerHTML = 'Contact';
+    aContact.innerHTML = 'Contact Us';
     aContact.href = '#';
     contactButton.id = 'contact'
     contactButton.appendChild(aContact);

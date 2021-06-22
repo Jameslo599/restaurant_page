@@ -20,13 +20,17 @@ let makeCopyright = function() {
     let facebookIcon = document.createElement('li');
     let facebookLink = document.createElement('a');
     let facebookFont = document.createElement('i');
-    facebookLink.href = '#';
+    facebookLink.href = 'https://www.facebook.com/ZenSushiMckinney/';
+    facebookLink.target = '_blank';
+    facebookLink.rel = 'noreferrer noopener';
     facebookFont.className = 'fab fa-facebook-square'
 
     let orderIcon = document.createElement('li');
     let orderLink = document.createElement('a');
     let orderFont = document.createElement('i');
-    orderLink.href = '#';
+    orderLink.href = 'https://www.zensushiandgrillmckinney.com/';
+    orderLink.target = '_blank';
+    orderLink.rel = 'noreferrer noopener';
     orderFont.className = 'fas fa-utensils';
 
     facebookLink.appendChild(facebookFont);

@@ -2,6 +2,7 @@ import {makeNavBar, makeLogo} from './navbar.js';
 import {contents, makeImage, populateWelcome} from './welcomepage.js';
 import makeMenu from './menu.js';
 import makeCopyright from './copyrightbar.js'
+import {makeContact, initMap} from './contact.js'
 
 makeNavBar();
 makeLogo();
@@ -25,10 +26,18 @@ let removeMenu = function() {
     } else {};
 };
 
+let removeContact = function() {
+    if (contactTab === 1) {
+        contents.removeChild(document.getElementById('contactHolder'));
+        contents.removeChild(document.getElementById('map'));
+    } else {};
+};
+
 let goHome = function() {
     if (homeTab === 0) {
         populateWelcome();
         removeMenu();
+        removeContact();
         homeTab = 1;
         menuTab = 0;
         contactTab = 0;
@@ -37,6 +46,7 @@ let goHome = function() {
 
 let goMenu = function() {
     if (menuTab === 0) {
+        removeContact();
         removeWelcome();
         makeMenu();
         homeTab = 0;
@@ -49,6 +59,8 @@ let goContact = function() {
     if (contactTab === 0) {
         removeWelcome();
         removeMenu();
+        makeContact();
+        initMap();
         contactTab = 1;
         menuTab = 0;
         homeTab = 0;

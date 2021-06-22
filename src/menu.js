@@ -1,4 +1,4 @@
-let contents = document.getElementById('content');
+import { contents } from "./welcomepage";
 
 let makeMenu = function() {
 
