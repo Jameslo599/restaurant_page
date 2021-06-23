@@ -12,6 +12,6 @@ I actually based this restaurant page on my family's own restaurant: Zen Sushi &
 
 The biggest hurdle was learning how to use the Google Maps API as I kept getting the error 'initMap() is not a function'. This error affected my tab switching logic so I spent quite some time to figure out the problem before realizing that webpack doesn't provide initMap() with globalScope. This is actually fine since I only needed to call the function when clicking the 'Contact Us' tab, but I had to delete the callback on the Google API to fix the error. 
 
-Overall, this project was a great learning experience and I'm thrilled to have learned webpack and more CSS skills. I will definitely utilize webpack going forward as it really helped my code be more managable.
+Overall, this project was a great learning experience and I'm thrilled to have learned webpack and more CSS skills. I will definitely utilize webpack going forward as it really helped my code be more manageable.
 
 -- James Lo
