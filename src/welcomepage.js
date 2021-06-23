@@ -23,11 +23,43 @@ let makeBio = function() {
 };
 
 let makeImage = function() {
-    let image = document.createElement("img");
-    image.src = 'images/Banner.jpg';
-    image.className = 'bannerImage';
-    image.id = 'banner'
-    contents.appendChild(image);
+    let imageContainer = document.createElement('div');
+    imageContainer.id = 'imageContainer';
+    let image;
+    for (let i = 1; i <= 6; i++) {
+        image = document.createElement('img');
+        image.src = `images/SushiBoat${i}.jpg`;
+        image.className = 'bannerImage';
+        image.id = 'banner';
+        imageContainer.appendChild(image);
+        };
+    contents.appendChild(imageContainer);
+
+    let modalContainer = document.createElement('div');
+    modalContainer.id = 'modalContainer';
+    contents.appendChild(modalContainer);
+
+    let fullScreenImage = document.getElementsByClassName('bannerImage');
+    let displayModal = function() {
+        let src = this.getAttribute('src');
+        let modal = document.getElementById('modalContainer');
+        modal.style.display = 'block';
+        modal.style.background = `url(${src})`;
+        modal.style.backgroundSize = 'contain';
+        modal.style.backgroundRepeat = 'no-repeat';
+        modal.style.backgroundPosition = 'center';
+        modal.style.backgroundColor = 'rgba(0,0,0,0.4)';
+        contents.appendChild(modal);
+    
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            };
+        };
+    };
+    for (let i = 0; i <fullScreenImage.length; i++) {
+        fullScreenImage[i].addEventListener('click', displayModal);
+    };
 };
 
 let populateWelcome = function() {
