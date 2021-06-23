@@ -16,7 +16,7 @@ let makeBio = function() {
     and has over 40 years of experience working in Japan, Hawaii and New York. 
     Kitamura-san focuses heavily on ensuring the quality 
     and standards of our sushi are of the highest order. 
-    In his free time, Kitamura-san enjoys playing with his cats, 
+    Kitamura-san enjoys playing with his cats, 
     cooking and spending time with his grandchildren.`;
     biography.id = 'biography';
     contents.appendChild(biography);
