@@ -195,6 +195,18 @@ body {
         padding: 40px 0px 20px 0px;
         margin: 0;
     }
+    .nav > li {
+        display: block;
+        text-align: left;
+        font-size: 30px;
+    }
+    #imageContainer {
+        display: block;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 100%;
+        justify-items: center;
+        grid-gap: 1em;
+    }
     #contactHolder {
         display: block;
         text-align: center;

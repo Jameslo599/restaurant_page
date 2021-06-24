@@ -27,6 +27,14 @@ let makeNavBar = function() {
     menuButton.appendChild(aMenu);
     navbar.appendChild(menuButton);
 
+    let orderButton = document.createElement('li');
+    let anOrder = document.createElement('a');
+    anOrder.innerHTML = 'Order Here';
+    anOrder.href = 'https://www.zensushiandgrillmckinney.com/';
+    orderButton.id = 'order'
+    orderButton.appendChild(anOrder);
+    navbar.appendChild(orderButton);
+
     let contactButton = document.createElement('li');
     let aContact = document.createElement('a');
     aContact.innerHTML = 'Contact Us';
