@@ -1,15 +1,22 @@
 import { contents } from "./welcomepage";
 
+function Element(item, className) {
+    this.item = document.createElement(item);
+    this.className = className;
+};
+
 let makeNavBar = function() {
-    let navbar = document.createElement('ul');
-    navbar.className = 'nav';
-    contents.appendChild(navbar);
+    //let navbar = document.createElement('ul');
+    //navbar.className = 'nav';
+    let navbar = new Element('ul', 'nav');
+    navbar.item.setAttribute('class', 'nav');
+    contents.appendChild(navbar.item);
 
     let navbarText = document.createElement('div');
     navbarText.innerHTML = 'Zen Sushi & Grill'
     navbarText.id = 'title';
     navbarText.classNames = 'text float left clearfix'
-    navbar.appendChild(navbarText);
+    navbar.item.appendChild(navbarText);
 
     let homeButton = document.createElement('li');
     let aHome = document.createElement('a');
@@ -17,7 +24,7 @@ let makeNavBar = function() {
     aHome.href = '#';
     homeButton.id = 'home'
     homeButton.appendChild(aHome);
-    navbar.appendChild(homeButton);
+    navbar.item.appendChild(homeButton);
 
     let menuButton = document.createElement('li');
     let aMenu = document.createElement('a');
@@ -25,7 +32,7 @@ let makeNavBar = function() {
     aMenu.href = '#';
     menuButton.id = 'menu'
     menuButton.appendChild(aMenu);
-    navbar.appendChild(menuButton);
+    navbar.item.appendChild(menuButton);
 
     let orderButton = document.createElement('li');
     let anOrder = document.createElement('a');
@@ -33,7 +40,7 @@ let makeNavBar = function() {
     anOrder.href = 'https://www.zensushiandgrillmckinney.com/';
     orderButton.id = 'order'
     orderButton.appendChild(anOrder);
-    navbar.appendChild(orderButton);
+    navbar.item.appendChild(orderButton);
 
     let contactButton = document.createElement('li');
     let aContact = document.createElement('a');
@@ -41,7 +48,7 @@ let makeNavBar = function() {
     aContact.href = '#';
     contactButton.id = 'contact'
     contactButton.appendChild(aContact);
-    navbar.appendChild(contactButton);
+    navbar.item.appendChild(contactButton);
 };
 
 let makeLogo = function() {
