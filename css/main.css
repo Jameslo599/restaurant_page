@@ -1,10 +1,10 @@
 body {
-    background-color: #FFFFFF;
+    background-color: #F3F3F3;
     font-family: 'Open Sans', sans-serif;
 }
 
 .nav {
-    background-color: #FFFFFF;
+    background-color: #F3F3F3;
     list-style: none;
     text-align: right;
     padding: 20px 0px 20px 0px;
@@ -12,6 +12,7 @@ body {
 }
 
 #title {
+    color:#DE354C;
     float: left;
     font-size: 40px;
     font: bold;
@@ -25,8 +26,10 @@ body {
 
 .nav > li > a {
     text-decoration: none;
-    color: #111111;
+    color: #3C1874;
     transition-duration: 0.4s;
+    text-decoration-line: underline;
+    text-decoration-thickness: from-font;
 }
 
 .nav > li > a:hover {
@@ -47,13 +50,14 @@ body {
     width: 100%;
     justify-items: center;
     grid-gap: 1em;
+    color: #3C1874;
 }
 
 .bannerImage {
     width: 100%;
     height: 300px;
     border: solid;
-    border-width: medium;
+    border-width: thin;
 }
 
 #header {
@@ -63,6 +67,7 @@ body {
 }
 
 #biography {
+    color: #283747;
     font-weight: lighter;
     text-align: center;
 }
@@ -79,7 +84,7 @@ body {
 .menuImage {
     width: 85%;
     border: solid;
-    border-width: medium;
+    border-width: thin;
 }
 
 #modalContainer {
@@ -159,11 +164,10 @@ body {
 #contactInfo {
     display: inline-block;
     text-align: center;
-    background-color: #FF6F61;
     border-radius: 2em;
     border-color: #1111118a;
     border: solid;
-    border-width: thick;
+    border-width: thin;
     padding-bottom: 3px;
     width: 500px;
 }
@@ -171,11 +175,10 @@ body {
 #openingTime {
     display: inline-block;
     text-align: center;
-    background-color: #FF6F61;
     border-radius: 2em;
     border-color: #1111118a;
     border: solid;
-    border-width: thick;
+    border-width: thin;
     padding-bottom: 3px;
     width: 500px;
 }
