@@ -1,8 +1,16 @@
 let contents = document.getElementById("content");
 
-let makeBio = function() {
-    let biography = document.createElement("h2");
-    biography.innerHTML = `We specialize in delicious Japanese cuisine 
+// Constructor for creating DOM elements
+const Element = function(item, className, id) {
+    this.item = document.createElement(item);
+    this.item.setAttribute('class', className);
+    this.item.setAttribute('id', className);
+};
+
+//Generates restaurant biography
+let makeBio = () => {
+    let biography = new Element('h2', 'biography');
+    biography.item.innerHTML = `We specialize in delicious Japanese cuisine 
     from fresh sushi with a variety of special fish, 
     to hibachi entrees grilled to perfection in the kitchen. <br/><br/>
     Chef-owner Jack with over 25 years of experience and who previously owned 
@@ -18,28 +26,15 @@ let makeBio = function() {
     and standards of our sushi are of the highest order. 
     Kitamura-san enjoys playing with his cats, 
     cooking and spending time with his grandchildren.`;
-    biography.id = 'biography';
-    contents.appendChild(biography);
+    contents.appendChild(biography.item);
 };
 
+//Generates six images in a grid that can be set fullscreen when clicked
 let makeImage = function() {
-    let imageContainer = document.createElement('div');
-    imageContainer.id = 'imageContainer';
-    let image;
-    for (let i = 1; i <= 6; i++) {
-        image = document.createElement('img');
-        image.src = `images/SushiBoat${i}.jpg`;
-        image.className = 'bannerImage';
-        image.id = 'banner';
-        imageContainer.appendChild(image);
-        };
-    contents.appendChild(imageContainer);
+    //Allow images to be presented full screen when clicked
+    let modalContainer = new Element('div', 'modalContainer');
+    contents.appendChild(modalContainer.item);
 
-    let modalContainer = document.createElement('div');
-    modalContainer.id = 'modalContainer';
-    contents.appendChild(modalContainer);
-
-    let fullScreenImage = document.getElementsByClassName('bannerImage');
     let displayModal = function() {
         let src = this.getAttribute('src');
         let modal = document.getElementById('modalContainer');
@@ -57,13 +52,16 @@ let makeImage = function() {
             };
         };
     };
-    for (let i = 0; i <fullScreenImage.length; i++) {
-        fullScreenImage[i].addEventListener('click', displayModal);
-    };
+    //Generates images
+    let imageContainer = new Element('div', 'imageContainer');
+    let image;
+    for (let i = 1; i <= 6; i++) {
+        image =  new Element('img', 'bannerImage');
+        image.item.src = `images/SushiBoat${i}.jpg`;
+        image.item.addEventListener('click', displayModal);
+        imageContainer.item.appendChild(image.item);
+        };
+    contents.appendChild(imageContainer.item);
 };
 
-let populateWelcome = function() {
-    makeBio();
-};
-
-export {contents, makeImage, populateWelcome};
+export {contents, Element, makeImage, makeBio};

@@ -1,66 +1,54 @@
-import { contents } from "./welcomepage";
+import {contents, Element} from "./welcomepage";
 
-function Element(item, className) {
-    this.item = document.createElement(item);
-    this.className = className;
-};
-
+//Generates full navigation bar
 let makeNavBar = function() {
-    //let navbar = document.createElement('ul');
-    //navbar.className = 'nav';
     let navbar = new Element('ul', 'nav');
-    navbar.item.setAttribute('class', 'nav');
     contents.appendChild(navbar.item);
 
-    let navbarText = document.createElement('div');
-    navbarText.innerHTML = 'Zen Sushi & Grill'
-    navbarText.id = 'title';
-    navbarText.classNames = 'text float left clearfix'
-    navbar.item.appendChild(navbarText);
+    let navbarText = new Element('div', 'title');
+    navbarText.item.innerHTML = 'Zen Sushi & Grill'
+    navbar.item.appendChild(navbarText.item);
 
-    let homeButton = document.createElement('li');
-    let aHome = document.createElement('a');
-    aHome.innerHTML = 'Home';
-    aHome.href = '#';
-    homeButton.id = 'home'
-    homeButton.appendChild(aHome);
-    navbar.item.appendChild(homeButton);
+    let homeButton = new Element('li', 'home');
+    let aHome = new Element('a');
+    aHome.item.innerHTML = 'Home';
+    aHome.item.href = '#';
+    homeButton.item.appendChild(aHome.item);
+    navbar.item.appendChild(homeButton.item);
 
-    let menuButton = document.createElement('li');
-    let aMenu = document.createElement('a');
-    aMenu.innerHTML = 'Menu';
-    aMenu.href = '#';
-    menuButton.id = 'menu'
-    menuButton.appendChild(aMenu);
-    navbar.item.appendChild(menuButton);
+    let menuButton = new Element('li', 'menu');
+    let aMenu = new Element('a');
+    aMenu.item.innerHTML = 'Menu';
+    aMenu.item.href = '#';
+    menuButton.item.appendChild(aMenu.item);
+    navbar.item.appendChild(menuButton.item);
 
-    let orderButton = document.createElement('li');
-    let anOrder = document.createElement('a');
-    anOrder.innerHTML = 'Order Here';
-    anOrder.href = 'https://www.zensushiandgrillmckinney.com/';
-    anOrder.target = '_blank'
-    anOrder.rel = 'noreferrer noopener';
-    orderButton.id = 'order'
-    orderButton.appendChild(anOrder);
-    navbar.item.appendChild(orderButton);
+    let orderButton = new Element('li', 'order');
+    let anOrder = new Element('a');
+    anOrder.item.innerHTML = 'Order Here';
+    anOrder.item.href = 'https://www.zensushiandgrillmckinney.com/';
+    anOrder.item.target = '_blank'
+    anOrder.item.rel = 'noreferrer noopener';
+    orderButton.item.appendChild(anOrder.item);
+    navbar.item.appendChild(orderButton.item);
 
-    let contactButton = document.createElement('li');
-    let aContact = document.createElement('a');
-    aContact.innerHTML = 'Contact Us';
-    aContact.href = '#';
-    contactButton.id = 'contact'
-    contactButton.appendChild(aContact);
-    navbar.item.appendChild(contactButton);
+    let contactButton = new Element('li', 'contact');
+    let aContact = new Element('a');
+    aContact.item.innerHTML = 'Contact Us';
+    aContact.item.href = '#';
+    contactButton.item.appendChild(aContact.item);
+    navbar.item.appendChild(contactButton.item);
 };
 
+//Generates Logo
 let makeLogo = function() {
-    let logo = document.createElement('img');
-    let aLogo = document.createElement('a');
-    aLogo.href = '';
-    aLogo.appendChild(logo);
-    logo.className = 'logo';
-    logo.src = 'images/Daruma.png';
-    document.getElementById('logoHolder').appendChild(aLogo);
+    let logo =  new Element('img', 'logo');
+    let aLogo = new Element('a');
+    aLogo.item.href = '';
+    aLogo.item.appendChild(logo.item);
+    //logo.className = 'logo';
+    logo.item.src = 'images/Daruma.png';
+    document.getElementById('logoHolder').appendChild(aLogo.item);
 };
 
-export {makeNavBar, makeLogo};
+export {Element, makeNavBar, makeLogo};

@@ -1,55 +1,54 @@
+import { Element } from './welcomepage'
+
+//Houses copyright bar
 let container = document.getElementById('copyrightHolder');
 
+//Generates complete copyright bar
 let makeCopyright = function() {
-    let copyright = document.createElement('div');
-    copyright.id = 'copyright';
-    copyright.className = 'clearfix';
-    container.appendChild(copyright);
+    let copyright = new Element('div', 'copyright');
+    copyright.item.className = 'clearfix';
+    container.appendChild(copyright.item);
 
-    let copyrightText = document.createElement('div');
-    copyrightText.innerHTML = 'COPYRIGHT JAMES LO 2021'
-    copyrightText.id = 'copyrightText';
-    copyrightText.classNames = 'text float left'
-    copyright.appendChild(copyrightText);
+    let copyrightText = new Element('div', 'copyrightText');
+    copyrightText.item.innerHTML = 'COPYRIGHT JAMES LO 2021'
+    copyrightText.item.classNames = 'text float left'
+    copyright.item.appendChild(copyrightText.item);
 
-    let copyrightLinks = document.createElement('ul');
-    copyrightLinks.className = 'links float right';
-    copyrightLinks.id = 'links';
-    copyright.appendChild(copyrightLinks);
+    let copyrightLinks = new Element('ul', 'links');
+    copyrightLinks.item.className = 'links float right';
+    copyright.item.appendChild(copyrightLinks.item);
 
-    let facebookIcon = document.createElement('li');
-    let facebookLink = document.createElement('a');
-    let facebookFont = document.createElement('i');
-    facebookLink.href = 'https://www.facebook.com/ZenSushiMckinney/';
-    facebookLink.target = '_blank';
-    facebookLink.rel = 'noreferrer noopener';
-    facebookFont.className = 'fab fa-facebook-square'
+    let facebookIcon = new Element('li');
+    let facebookLink = new Element('a');
+    let facebookFont = new Element('i', 'fab fa-facebook-square');
+    facebookLink.item.href = 
+    'https://www.facebook.com/ZenSushiMckinney/';
+    facebookLink.item.target = '_blank';
+    facebookLink.item.rel = 'noreferrer noopener';
 
-    let orderIcon = document.createElement('li');
-    let orderLink = document.createElement('a');
-    let orderFont = document.createElement('i');
-    orderLink.href = 'https://www.zensushiandgrillmckinney.com/';
-    orderLink.target = '_blank';
-    orderLink.rel = 'noreferrer noopener';
-    orderFont.className = 'fas fa-utensils';
+    let orderIcon = new Element('li');
+    let orderLink = new Element('a');
+    let orderFont = new Element('i', 'fas fa-utensils');
+    orderLink.item.href = 'https://www.zensushiandgrillmckinney.com/';
+    orderLink.item.target = '_blank';
+    orderLink.item.rel = 'noreferrer noopener';
 
-    let gitIcon = document.createElement('li');
-    let gitLink = document.createElement('a');
-    let gitFont = document.createElement('i');
-    gitLink.href = 'https://github.com/Jameslo599';
-    gitLink.target = '_blank';
-    gitLink.rel = 'noreferrer noopener';
-    gitFont.className = 'fab fa-github-square';
+    let gitIcon = new Element('li');
+    let gitLink = new Element('a');
+    let gitFont = new Element('i', 'fab fa-github-square');
+    gitLink.item.href = 'https://github.com/Jameslo599';
+    gitLink.item.target = '_blank';
+    gitLink.item.rel = 'noreferrer noopener';
 
-    facebookLink.appendChild(facebookFont);
-    facebookIcon.appendChild(facebookLink);
-    copyrightLinks.appendChild(facebookIcon);
-    orderLink.appendChild(orderFont);
-    orderIcon.appendChild(orderLink);
-    copyrightLinks.appendChild(orderIcon);
-    gitLink.appendChild(gitFont);
-    gitIcon.appendChild(gitLink);
-    copyrightLinks.appendChild(gitIcon);
+    facebookLink.item.appendChild(facebookFont.item);
+    facebookIcon.item.appendChild(facebookLink.item);
+    copyrightLinks.item.appendChild(facebookIcon.item);
+    orderLink.item.appendChild(orderFont.item);
+    orderIcon.item.appendChild(orderLink.item);
+    copyrightLinks.item.appendChild(orderIcon.item);
+    gitLink.item.appendChild(gitFont.item);
+    gitIcon.item.appendChild(gitLink.item);
+    copyrightLinks.item.appendChild(gitIcon.item);
 };
 
 export default makeCopyright;
