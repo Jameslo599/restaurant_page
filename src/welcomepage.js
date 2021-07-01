@@ -1,7 +1,7 @@
 let contents = document.getElementById("content");
 
 // Constructor for creating DOM elements
-const Element = function(item, className, id) {
+const Element = function(item, className) {
     this.item = document.createElement(item);
     this.item.setAttribute('class', className);
     this.item.setAttribute('id', className);

@@ -46,9 +46,18 @@ let makeLogo = function() {
     let aLogo = new Element('a');
     aLogo.item.href = '';
     aLogo.item.appendChild(logo.item);
-    //logo.className = 'logo';
     logo.item.src = 'images/Daruma.png';
     document.getElementById('logoHolder').appendChild(aLogo.item);
 };
 
-export {Element, makeNavBar, makeLogo};
+//Generates hamburger icon for mobile devices
+let makeHamburger = function() {
+    let hamburger =  new Element('img', 'hamburger');
+    let aHamburger = new Element('a');
+    aHamburger.item.href = '';
+    aHamburger.item.appendChild(hamburger.item);
+    hamburger.item.src = 'images/hamburger-icon.png';
+    document.getElementById('logoHolder').appendChild(aHamburger.item);
+};
+
+export {Element, makeNavBar, makeLogo, makeHamburger};

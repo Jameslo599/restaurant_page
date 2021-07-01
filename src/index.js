@@ -1,15 +1,20 @@
-import {makeNavBar, makeLogo} from './navbar.js';
+import {makeNavBar, makeLogo, makeHamburger} from './navbar.js';
+import {hideOverlay, makeOverlay, showOverlay} from './overlay.js'
 import {makeImage, makeBio} from './welcomepage.js';
 import makeMenu from './menu.js';
 import makeCopyright from './copyrightbar.js'
 import {makeContact, initMap} from './contact.js'
 
 let generatePage = () => {
+    makeOverlay();
     makeNavBar();
     makeLogo();
+    makeHamburger();
     makeImage();
     makeBio();
     makeCopyright();
+    showOverlay();
+    hideOverlay();
     };
 generatePage();
 
