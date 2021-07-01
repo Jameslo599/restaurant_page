@@ -8,7 +8,7 @@ This restaurant page is a demonstration of my ability to use webpack to bundle m
 
 While working on this project, I also learned many new skills such as using Google Maps API, navbar and copyright bar generation and also manipulating images with css grid.
 
-I actually based this restaurant page on my family's own restaurant: Zen Sushi & Grill. Before learning how to code, we had been using the generic Google Business page which offers almost no customization. I plan to make this our official website in the future. 
+I actually based this restaurant page on my family's own restaurant: Zen Sushi & Grill. Before learning how to code, we had been using the generic Google Business page which offers almost no customization. We currently use this restaurant page as our official site!
 
 The biggest hurdle was learning how to use the Google Maps API as I kept getting the error 'initMap() is not a function'. This error affected my tab switching logic so I spent quite some time to figure out the problem before realizing that webpack doesn't provide initMap() with globalScope. This is actually fine since I only needed to call the function when clicking the 'Contact Us' tab, but I had to delete the callback on the Google API to fix the error. 
 
