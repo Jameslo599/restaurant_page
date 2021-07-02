@@ -82,3 +82,10 @@ document.getElementById('menu')
 .addEventListener('click', goMenu, false);
 document.getElementById('contact')
 .addEventListener('click', goContact, false);
+
+document.getElementById('mobileHome')
+.addEventListener('click', goHome, false);
+document.getElementById('mobileMenu')
+.addEventListener('click', goMenu, false);
+document.getElementById('mobileContact')
+.addEventListener('click', goContact, false);

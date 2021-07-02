@@ -15,14 +15,14 @@ let makeOverlay = function() {
     let overlayList = new Element('ul', 'overlayList');
     overlay.item.appendChild(overlayList.item);
 
-    let homeButton = new Element('li', 'home');
+    let homeButton = new Element('li', 'mobileHome');
     let aHome = new Element('a');
     aHome.item.innerHTML = 'Home';
     aHome.item.href = '#';
     homeButton.item.appendChild(aHome.item);
     overlayList.item.appendChild(homeButton.item);
 
-    let menuButton = new Element('li', 'menu');
+    let menuButton = new Element('li', 'mobileMenu');
     let aMenu = new Element('a');
     aMenu.item.innerHTML = 'Menu';
     aMenu.item.href = '#';
@@ -38,7 +38,7 @@ let makeOverlay = function() {
     orderButton.item.appendChild(anOrder.item);
     overlayList.item.appendChild(orderButton.item);
 
-    let contactButton = new Element('li', 'contact');
+    let contactButton = new Element('li', 'mobileContact');
     let aContact = new Element('a');
     aContact.item.innerHTML = 'Contact Us';
     aContact.item.href = '#';
