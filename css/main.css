@@ -1,7 +1,7 @@
 body {
   background-color: #f3f3f3;
   font-family: "Open Sans", sans-serif;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 }
 
 .nav {
@@ -316,4 +316,19 @@ body {
     padding-bottom: 3px;
     width: auto;
   }
+  #copyrightHolder {
+    display: block;
+    width: 100%;
+    max-width: auto;
+    margin: 0 auto;
+	padding: 0;
+    border: 1px solid #111111;
+    background-color: #111111;
+    box-sizing: border-box;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+}
 }
