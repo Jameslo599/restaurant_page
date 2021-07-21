@@ -27,14 +27,14 @@ body {
 
 .nav > li > a {
   text-decoration: none;
-  color: #3c1874;
+  color: #de354c;
   transition-duration: 0.4s;
   text-decoration-line: underline;
   text-decoration-thickness: from-font;
 }
 
 .nav > li > a:hover {
-  color: #c1c1c1;
+  color: #1b1717;
 }
 
 .logo {
@@ -74,6 +74,7 @@ body {
   height: 300px;
   border: solid;
   border-width: thin;
+  cursor: pointer;
 }
 
 #header {
@@ -86,6 +87,15 @@ body {
   color: #283747;
   font-weight: lighter;
   text-align: center;
+  margin-left: 100px;
+  margin-right: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-right: solid;
+  border-left: solid;
+  border-right-width: thin;
+  border-left-width: thin;
+  border-color: #ce1212;
 }
 
 #gallery {
@@ -189,23 +199,25 @@ body {
 #contactInfo {
   display: inline-block;
   text-align: center;
-  border-radius: 2em;
   border-color: #1111118a;
   border: solid;
   border-width: thin;
   padding-bottom: 3px;
   width: 500px;
+  border-top: none;
+  border-bottom: none;
 }
 
 #openingTime {
   display: inline-block;
   text-align: center;
-  border-radius: 2em;
   border-color: #1111118a;
   border: solid;
   border-width: thin;
   padding-bottom: 3px;
   width: 500px;
+  border-top: none;
+  border-bottom: none;
 }
 
 #map {
@@ -292,6 +304,10 @@ body {
   .bannerImage {
     height: 100px;
   }
+  #biography {
+    margin-left: 0;
+    margin-right: 0;
+  }
   #contactHolder {
     display: block;
     text-align: center;
@@ -321,7 +337,7 @@ body {
     width: 100%;
     max-width: auto;
     margin: 0 auto;
-	padding: 0;
+    padding: 0;
     border: 1px solid #111111;
     background-color: #111111;
     box-sizing: border-box;
@@ -330,5 +346,5 @@ body {
     left: 0px;
     right: 0px;
     margin-bottom: 0px;
-}
+  }
 }
